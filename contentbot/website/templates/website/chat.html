@@ -1,0 +1,19 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Chatbot{% endblock %}
+{% block style %} <link rel="stylesheet" href="{% static 'css/chat.css' %}">{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>ChatGPT for Content Creators</h1>
+    <form id="chat-form">
+        <textarea id="user-message" placeholder="Enter your message..." required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <div id="chat-output">
+        <!-- Responses will be displayed here -->
+    </div>
+</div>
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}
