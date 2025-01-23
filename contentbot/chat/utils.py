@@ -7,7 +7,7 @@ client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 async def chatbot_response(user_input):
     try:
         # Determine language style dynamically (if provided, or default to both)
-        language_style = "English if user's input is in english, else pidgin" 
+        language_style = "You always use good simple plain English Language except when prompted in pidgin, and take not of simple typographical error not to confuse such for pidgin" 
 
         response = await client.chat.completions.create(
             model="gpt-3.5-turbo",
